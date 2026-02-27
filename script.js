@@ -12,12 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function showPage(pageId) {
-    // 隐藏所有页面
+    // 隐藏所有页面，并暂停其中的视频
     document.querySelectorAll('.page-section').forEach(section => {
         section.classList.remove('active');
+        section.querySelectorAll('video').forEach(video => video.pause());
     });
     // 显示指定页面
-    document.getElementById(pageId).classList.add('active');
+    const activeSection = document.getElementById(pageId);
+    if (activeSection) activeSection.classList.add('active');
+
+    // 自动播放当前页面的视频
+    if (activeSection) {
+        activeSection.querySelectorAll('video').forEach(function (video) {
+            video.muted = true;
+            video.play().catch(function () {});
+        });
+    }
 
     // 更新侧边栏状态
     document.querySelectorAll('.nav-menu a').forEach(link => {

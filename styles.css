@@ -176,6 +176,38 @@ h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 2
 .full-img { width: 100%; border-radius: 12px; margin: 30px 0; }
 .content-text { font-size: 1.1rem; color: #444; max-width: 900px; }
 
+/* 视频展示网格 */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+}
+.video-grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+}
+.video-item {
+    background: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+.video-item h4 {
+    font-size: 1rem;
+    padding: 12px 16px;
+    margin: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    color: var(--primary-color);
+}
+.video-item video {
+    width: 100%;
+    display: block;
+}
+@media (max-width: 900px) {
+    .video-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 900px) {
     nav { width: 80px; padding: 40px 10px; }
     .nav-logo, .nav-menu span { display: none; }

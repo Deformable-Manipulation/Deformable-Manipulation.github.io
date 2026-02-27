@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAI-100 | 柔性物体仿真与操作</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">Outline</div>
+        <ul class="nav-menu">
+            <li><a onclick="showPage('overview')" id="nav-overview" class="active"><i class="fas fa-th-large"></i> <span>Overview</span></a></li>
+            <li style="margin-top: 30px; font-size: 12px; color: #ccc; padding-left: 12px;">REPRESENTATIVE WORKS</li>
+            <li><a onclick="showPage('UniGarmentManip')" id="nav-UniGarmentManip"><i class="fas fa-file-alt"></i> <span>UniGarmentManip</span></a></li>
+            <li><a onclick="showPage('GarmentPile')" id="nav-GarmentPile"><i class="fas fa-file-alt"></i> <span>GarmentPile</span></a></li>
+            <li><a onclick="showPage('DexGarmentLab')" id="nav-DexGarmentLab"><i class="fas fa-file-alt"></i> <span>DexGarmentLab</span></a></li>
+            <li><a onclick="showPage('GarmentPile++')" id="nav-GarmentPile++"><i class="fas fa-file-alt"></i> <span>GarmentPile++</span></a></li>
+            <li><a onclick="showPage('SparseMeetsDense')" id="nav-SparseMeetsDense"><i class="fas fa-file-alt"></i> <span>Sparse Meets Dense</span></a></li>
+            <li><a onclick="showPage('Dexknot')" id="nav-Dexknot"><i class="fas fa-file-alt"></i> <span>Dexknot</span></a></li>
+            <li><a onclick="showPage('Lehome')" id="nav-Lehome"><i class="fas fa-file-alt"></i> <span>Lehome</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="overview" class="page-section active">
+            <h1>柔性物体仿真与操作</h1>
+            <p class="subtitle">这里是你实验室或个人研究工作的总体介绍。点击下方的名片可以查看每篇论文的详细实现细节、实验结果与图表展示。</p>
+            
+            <div class="paper-grid">
+                <div class="paper-card" onclick="showPage('UniGarmentManip')">
+                    <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400?text=UniGarmentManip')"></div>
+                    <div class="card-content">
+                        <div class="card-tag">CVPR 2024 | CEAI25 Best Nomination</div>
+                        <h3 class="card-title">UniGarmentManip</h3>
+                        <p class="card-desc">A Unified Framework for Category-Level Garment Manipulation via Dense Visual Correspondence</p>
+                        <div class="links">
+                            <a href="https://github.com/luhr2003/UniGarmentManip" class="link-icon" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="https://arxiv.org/abs/2405.06903" class="link-icon" title="Paper" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a>
+                            <a href="https://warshallrho.github.io/unigarmentmanip/" class="link-icon" title="Project" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card" onclick="showPage('GarmentPile')">
+                    <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400?text=GarmentPile')"></div>
+                    <div class="card-content">
+                        <div class="card-tag">CVPR2025 | IROS 2025 Workshop Best Paper Finalist</div>
+                        <h3 class="card-title">GarmentPile</h3>
+                        <p class="card-desc">Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation</p>
+                        <div class="links">
+                            <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon" title="Paper"><i class="fas fa-file-pdf"></i></a>
+                            <a href="#" class="link-icon" title="Project"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card" onclick="showPage('DexGarmentLab')">
+                    <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400?text=DexGarmentLab')"></div>
+                    <div class="card-content">
+                        <div class="card-tag">NeurIPS 2025 Spotlight | IROS 2025 Workshop Best Paper Finalist</div>
+                        <h3 class="card-title">DexGarmentLab</h3>
+                        <p class="card-desc">Dexterous Garment Manipulation Environment with Generalizable Policy</p>
+                        <div class="links">
+                            <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon" title="Paper"><i class="fas fa-file-pdf"></i></a>
+                            <a href="#" class="link-icon" title="Project"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card" onclick="showPage('GarmentPile++')">
+                    <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400?text=GarmentPile%2B%2B')"></div>
+                    <div class="card-content">
+                        <div class="card-tag">ICRA 2026</div>
+                        <h3 class="card-title">GarmentPile++</h3>
+                        <p class="card-desc">Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning</p>
+                        <div class="links">
+                            <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon" title="Paper"><i class="fas fa-file-pdf"></i></a>
+                            <a href="#" class="link-icon" title="Project"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card" onclick="showPage('SparseMeetsDense')">
+                    <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400?text=Sparse+Meets+Dense')"></div>
+                    <div class="card-content">
+                        <div class="card-tag">ICRA 2026</div>
+                        <h3 class="card-title">Sparse Meets Dense</h3>
+                        <p class="card-desc">Correspondence Guided Robotic Manipulation with Rigid-Deformable Interactions</p>
+                        <div class="links">
+                            <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon" title="Paper"><i class="fas fa-file-pdf"></i></a>
+                            <a href="#" class="link-icon" title="Project"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card" onclick="showPage('Dexknot')">
+                    <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400?text=Dexknot')"></div>
+                    <div class="card-content">
+                        <div class="card-tag">ICRA 2026</div>
+                        <h3 class="card-title">Dexknot</h3>
+                        <p class="card-desc">Generalizable Visuomotor Policy Learning for Dexterous Bag-Knotting Manipulation</p>
+                        <div class="links">
+                            <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon" title="Paper"><i class="fas fa-file-pdf"></i></a>
+                            <a href="#" class="link-icon" title="Project"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card" onclick="showPage('Lehome')">
+                    <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400?text=Lehome')"></div>
+                    <div class="card-content">
+                        <div class="card-tag">ICRA 2026 | IROS 2025 Workshop Best Paper</div>
+                        <h3 class="card-title">Lehome</h3>
+                        <p class="card-desc">A Simulation Environment for Deformable Object Manipulation in Household Scenarios</p>
+                        <div class="links">
+                            <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon" title="Paper"><i class="fas fa-file-pdf"></i></a>
+                            <a href="#" class="link-icon" title="Project"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="UniGarmentManip" class="page-section">
+            <div class="detail-header">
+                <div class="card-tag">CVPR 2024 | CEAI25 Best Nomination</div>
+                <h1>UniGarmentManip</h1>
+                <p>A Unified Framework for Category-Level Garment Manipulation via Dense Visual Correspondence</p>
+                <div class="links">
+                    <a href="https://github.com/luhr2003/UniGarmentManip" class="link-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+                    <a href="https://arxiv.org/abs/2405.06903" class="link-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="https://warshallrho.github.io/unigarmentmanip/" class="link-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <div class="content-text">
+                <h3>Abstract</h3>
+                <p>统一的服装操作框架，实现从感知到抓取的全流程闭环控制。你可以展示多张论文中的图表 (Figures)，并配合文字说明。该模板支持响应式布局，保证在手机端也有良好的阅读体验。</p>
+                <img src="https://via.placeholder.com/1200x600?text=Architecture+Diagram" class="full-img" alt="论文图示">
+                <h3>Key Contribution</h3>
+                <ul>
+                    <li>提出了 XXX 新型架构，降低了计算量。</li>
+                    <li>在三个基准数据集上达到了 SOTA 性能。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="GarmentPile" class="page-section">
+            <div class="detail-header">
+                <div class="card-tag">CVPR2025 | IROS 2025 Workshop Best Paper Finalist</div>
+                <h1>GarmentPile</h1>
+                <p>Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation</p>
+                <div class="links">
+                    <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="link-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="link-btn"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <div class="content-text">
+                <p>这里是 GarmentPile 的详细内容...</p>
+            </div>
+        </section>
+
+        <section id="DexGarmentLab" class="page-section">
+            <div class="detail-header">
+                <div class="card-tag">NeurIPS 2025 Spotlight | IROS 2025 Workshop Best Paper Finalist</div>
+                <h1>DexGarmentLab</h1>
+                <p>Dexterous Garment Manipulation Environment with Generalizable Policy</p>
+                <div class="links">
+                    <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="link-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="link-btn"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <div class="content-text">
+                <p>这里是 DexGarmentLab 的详细内容...</p>
+            </div>
+        </section>
+
+        <section id="GarmentPile++" class="page-section">
+            <div class="detail-header">
+                <div class="card-tag">ICRA 2026</div>
+                <h1>GarmentPile++</h1>
+                <p>Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning</p>
+                <div class="links">
+                    <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="link-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="link-btn"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <div class="content-text">
+                <p>这里是 GarmentPile++ 的详细内容...</p>
+            </div>
+        </section>
+
+        <section id="SparseMeetsDense" class="page-section">
+            <div class="detail-header">
+                <div class="card-tag">ICRA 2026</div>
+                <h1>Sparse Meets Dense</h1>
+                <p>Correspondence Guided Robotic Manipulation with Rigid-Deformable Interactions</p>
+                <div class="links">
+                    <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="link-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="link-btn"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <div class="content-text">
+                <p>这里是 Sparse Meets Dense 的详细内容...</p>
+            </div>
+        </section>
+
+        <section id="Dexknot" class="page-section">
+            <div class="detail-header">
+                <div class="card-tag">ICRA 2026</div>
+                <h1>Dexknot</h1>
+                <p>Generalizable Visuomotor Policy Learning for Dexterous Bag-Knotting Manipulation</p>
+                <div class="links">
+                    <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="link-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="link-btn"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <div class="content-text">
+                <p>这里是 Dexknot 的详细内容...</p>
+            </div>
+        </section>
+
+        <section id="Lehome" class="page-section">
+            <div class="detail-header">
+                <div class="card-tag">ICRA 2026 | IROS 2025 Workshop Best Paper</div>
+                <h1>Lehome</h1>
+                <p>A Simulation Environment for Deformable Object Manipulation in Household Scenarios</p>
+                <div class="links">
+                    <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="link-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="link-btn"><i class="fas fa-globe"></i> Website</a>
+                </div>
+            </div>
+            <div class="content-text">
+                <p>这里是 Lehome 的详细内容...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
